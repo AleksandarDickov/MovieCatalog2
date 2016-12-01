@@ -1,0 +1,19 @@
+﻿<Window x:Class="MovieCatalog.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieCatalog"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="459.553" Width="684.35">
+    <Grid>
+        <Button x:Name="button" Content="Import" HorizontalAlignment="Left" Height="32" Margin="10,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Copy" Content="Exit" HorizontalAlignment="Left" Height="32" Margin="575,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Copy1" Content="Export" HorizontalAlignment="Left" Height="32" Margin="122,387,0,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="button_Copy3" Content="Edit" HorizontalAlignment="Left" Height="32" Margin="424,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Copy4" Content="Delete" HorizontalAlignment="Left" Height="32" Margin="549,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Copy2" Content="Add" HorizontalAlignment="Left" Height="32" Margin="304,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="243" Margin="10,10,0,0" VerticalAlignment="Top" Width="630"/>
+
+    </Grid>
+</Window>
