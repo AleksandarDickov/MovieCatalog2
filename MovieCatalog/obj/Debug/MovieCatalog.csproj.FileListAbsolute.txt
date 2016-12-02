@@ -15,3 +15,17 @@ C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\Mo
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\MovieCatalog.exe.config
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.exe
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.pdb
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\bin\Debug\MovieCatalog.exe.config
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.exe
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.pdb
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.csprojResolveAssemblyReference.cache
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MainWindow.g.cs
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\App.g.cs
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog_MarkupCompile.cache
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog_MarkupCompile.lref
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\bin\Debug\MovieCatalog.exe
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\bin\Debug\MovieCatalog.pdb
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MainWindow.baml
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.g.resources
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.Properties.Resources.resources
+C:\Users\Aleksandar\Source\Repos\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.csproj.GenerateResource.Cache

@@ -25,5 +25,11 @@ namespace MovieCatalog
             InitializeComponent();
             dataGrid.ItemsSource = MovieName.getMovie();
     }
+
+        private void button_Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+            Application.Current.Shutdown();
+        }
     }
 }

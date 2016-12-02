@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="459.553" Width="684.35">
     <Grid>
-        <Button x:Name="button" Content="Import" HorizontalAlignment="Left" Height="32" Margin="10,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="button_Copy" Content="Exit" HorizontalAlignment="Left" Height="32" Margin="575,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="button_Copy1" Content="Export" HorizontalAlignment="Left" Height="32" Margin="122,387,0,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="button_Copy3" Content="Edit" HorizontalAlignment="Left" Height="32" Margin="424,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="button_Copy4" Content="Delete" HorizontalAlignment="Left" Height="32" Margin="549,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="button_Copy2" Content="Add" HorizontalAlignment="Left" Height="32" Margin="304,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Import" Content="Import" HorizontalAlignment="Left" Height="32" Margin="10,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Exit" Content="Exit" HorizontalAlignment="Left" Height="32" Margin="575,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Exit_Click"/>
+        <Button x:Name="button_Export" Content="Export" HorizontalAlignment="Left" Height="32" Margin="122,387,0,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="button_Edit" Content="Edit" HorizontalAlignment="Left" Height="32" Margin="424,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Delete" Content="Delete" HorizontalAlignment="Left" Height="32" Margin="549,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button_Add" Content="Add" HorizontalAlignment="Left" Height="32" Margin="304,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold"/>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="243" Margin="10,10,0,0" VerticalAlignment="Top" Width="630"/>
 
     </Grid>
