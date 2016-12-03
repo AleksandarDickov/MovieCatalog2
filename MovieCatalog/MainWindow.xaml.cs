@@ -20,10 +20,29 @@ namespace MovieCatalog
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<MovieName> movies;
         public MainWindow()
         {
             InitializeComponent();
-            dataGrid.ItemsSource = MovieName.getMovie();
-    }
+            movies = MovieName.getMovie();
+            dataGrid.ItemsSource = movies;
+        }
+
+        private void button_Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+            Application.Current.Shutdown();
+        }
+
+        private void button_Add_Click(object sender, RoutedEventArgs e)
+        {
+            AddMovie add = new AddMovie();
+            if (add.ShowDialog() == true)
+            {
+
+                movies.Add(add.Movie);
+
+            }
+        }
     }
 }
