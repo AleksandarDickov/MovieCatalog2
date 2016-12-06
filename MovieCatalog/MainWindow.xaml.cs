@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,12 +21,13 @@ namespace MovieCatalog
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<MovieName> movies;
+        public ObservableCollection<MovieName> moviesList = new ObservableCollection<MovieName>();
+       
         public MainWindow()
         {
             InitializeComponent();
-            movies = MovieName.getMovie();
-            dataGrid.ItemsSource = movies;
+            moviesList = MovieName.getMovie();
+            dataGrid.ItemsSource = moviesList;
         }
 
         private void button_Exit_Click(object sender, RoutedEventArgs e)
@@ -36,13 +38,35 @@ namespace MovieCatalog
 
         private void button_Add_Click(object sender, RoutedEventArgs e)
         {
-            AddMovie add = new AddMovie();
-            if (add.ShowDialog() == true)
+            AddMovie addDialog = new AddMovie();
+            if (addDialog.ShowDialog() == true)
             {
-
-                movies.Add(add.Movie);
-
+                moviesList.Add(addDialog.Movie);
+                dataGrid.Items.Refresh();
             }
+        }
+
+        private void button_Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+             EditMovie editDialog = new EditMovie();
+
+            if (dataGrid.SelectedItem ==null)
+            {
+                MessageBox.Show("There is nothing to select");
+            }
+            else
+            {
+                editDialog.Movie = (MovieName)dataGrid.SelectedItem;
+            }
+
+
+            if (editDialog.ShowDialog() == true)
+            {
+                moviesList.Add(editDialog.Movie);
+                dataGrid.Items.Refresh();
+            }
+
         }
     }
 }

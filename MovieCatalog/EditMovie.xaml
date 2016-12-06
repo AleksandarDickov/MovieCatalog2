@@ -1,13 +1,12 @@
-﻿<Window x:Class="MovieCatalog.AddMovie"
+﻿<Window x:Class="MovieCatalog.EditMovie"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieCatalog"
         mc:Ignorable="d"
-        Title="AddMovie" Height="332.425" Width="342.5">
-    <Grid Margin="0,0,2,3">
-
+        Title="EditMovie" Height="300" Width="300">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>

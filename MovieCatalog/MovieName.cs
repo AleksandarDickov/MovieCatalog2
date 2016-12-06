@@ -73,9 +73,9 @@ namespace MovieCatalog
           
         }
 
-        public static List<MovieName> getMovie()
+        public static ObservableCollection<MovieName> getMovie()
         {
-            var movie = new List<MovieName>();
+            var movie = new ObservableCollection<MovieName>();
             movie.Add(new MovieName() { Name = "Avatar", Genre = "Fantasy", Director = "James Cameron", ReleaseDate = new DateTime(2009, 12, 18) });
             movie.Add(new MovieName() { Name = "Dark Knight", Genre = "Action", Director = "Christopher Nolan", ReleaseDate = new DateTime(2008, 7 , 9) });
             movie.Add(new MovieName() { Name = "Gilmors girls", Genre = "Sci-Fi", Director = "Ivan Peric", ReleaseDate = new DateTime(2018 , 1, 1) });
