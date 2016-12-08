@@ -68,5 +68,10 @@ namespace MovieCatalog
             }
 
         }
+
+        private void button_Import_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

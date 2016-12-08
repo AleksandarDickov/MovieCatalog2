@@ -16,13 +16,13 @@
                   Margin="10,10,0,0" VerticalAlignment="Top" Width="630" AutoGenerateColumns="False" ColumnWidth="*" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name"
-                                          Binding="{Binding Name}"  />
+                                          Binding="{Binding Name, Mode=TwoWay}"  />
                 <DataGridTextColumn Header="Genre"
-                                          Binding="{Binding Genre}" />
+                                          Binding="{Binding Genre, Mode=TwoWay}" />
                 <DataGridTextColumn Header="Director"
-                                          Binding="{Binding Director}" />
+                                          Binding="{Binding Director, Mode=TwoWay}" />
                 <DataGridTextColumn Header="ReleaseDate"
-                                          Binding="{Binding ReleaseDate}" />
+                                          Binding="{Binding ReleaseDate, Mode=TwoWay}" />
             </DataGrid.Columns>
         </DataGrid>
 

@@ -31,7 +31,9 @@ namespace MovieCatalog
             set
             {
                 _name = value;
-                RaisePropertyChanged();
+                // RaisePropertyChanged();
+                OnPropertyChanged();
+               
             }
         }
 
@@ -72,6 +74,8 @@ namespace MovieCatalog
         {
           
         }
+
+        
 
         public static ObservableCollection<MovieName> getMovie()
         {
