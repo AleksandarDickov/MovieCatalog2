@@ -22,7 +22,7 @@ namespace MovieCatalog
     public partial class MainWindow : Window
     {
         public ObservableCollection<MovieName> moviesList = new ObservableCollection<MovieName>();
-       
+
         public MainWindow()
         {
             InitializeComponent();
@@ -48,30 +48,45 @@ namespace MovieCatalog
 
         private void button_Edit_Click(object sender, RoutedEventArgs e)
         {
-
-             EditMovie editDialog = new EditMovie();
-
-            if (dataGrid.SelectedItem ==null)
+            if (dataGrid.SelectedItem == null)
             {
                 MessageBox.Show("There is nothing to select");
+
             }
             else
             {
-                editDialog.Movie = (MovieName)dataGrid.SelectedItem;
+                var selectedMovie = (MovieName)dataGrid.SelectedItem;
+                var editDialog = new EditMovie(selectedMovie);
+                
+
+                if (editDialog.ShowDialog() == true)
+                {
+
+                }
             }
-
-
-            if (editDialog.ShowDialog() == true)
-            {
-                moviesList.Add(editDialog.Movie);
-                dataGrid.Items.Refresh();
-            }
-
         }
 
         private void button_Import_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void button_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (dataGrid.SelectedItem == null)
+            {
+                MessageBox.Show("There is nothing to select");
+
+            }
+            else
+            {
+                if ((MessageBox.Show("Are you sure you want to delete?", "Please confirm.", MessageBoxButton.YesNo) == MessageBoxResult.Yes))
+                {
+                    moviesList.Remove((MovieName)dataGrid.SelectedItem);
+                }
+            }
+        }
+        
+    
     }
 }

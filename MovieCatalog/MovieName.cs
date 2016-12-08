@@ -32,7 +32,7 @@ namespace MovieCatalog
             {
                 _name = value;
                 // RaisePropertyChanged();
-                OnPropertyChanged();
+                RaisePropertyChanged();
                
             }
         }
@@ -66,16 +66,10 @@ namespace MovieCatalog
             set
             {
                 _releaseDate = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
-
-        private void OnPropertyChanged()
-        {
-          
-        }
-
-        
+       
 
         public static ObservableCollection<MovieName> getMovie()
         {
