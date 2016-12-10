@@ -22,8 +22,6 @@ namespace MovieCatalog
             }
         }
 
-
-
         private string _name;
         public string Name
         {
@@ -31,19 +29,17 @@ namespace MovieCatalog
             set
             {
                 _name = value;
-                // RaisePropertyChanged();
                 RaisePropertyChanged();
-               
             }
         }
 
-        private string _genre;
-        public string Genre
+        private Genre _genrePick;
+        public Genre GenrePick
         {
-            get { return _genre; }
+            get { return _genrePick; }
             set
             {
-                _genre = value;
+                _genrePick = value;
                 RaisePropertyChanged();
             }
         }
@@ -74,15 +70,22 @@ namespace MovieCatalog
         public static ObservableCollection<MovieName> getMovie()
         {
             var movie = new ObservableCollection<MovieName>();
-            movie.Add(new MovieName() { Name = "Avatar", Genre = "Fantasy", Director = "James Cameron", ReleaseDate = new DateTime(2009, 12, 18) });
-            movie.Add(new MovieName() { Name = "Dark Knight", Genre = "Action", Director = "Christopher Nolan", ReleaseDate = new DateTime(2008, 7 , 9) });
-            movie.Add(new MovieName() { Name = "Gilmors girls", Genre = "Sci-Fi", Director = "Ivan Peric", ReleaseDate = new DateTime(2018 , 1, 1) });
-            movie.Add(new MovieName() { Name = "Scrubs", Genre = "Family", Director = "Aleksandar Dickov", ReleaseDate = new DateTime(2066,5,30) });
+            movie.Add(new MovieName() { Name = "Avatar", GenrePick = Genre.Fantasy , Director = "James Cameron", ReleaseDate = new DateTime(2009, 12, 18) });
+            movie.Add(new MovieName() { Name = "Dark Knight", GenrePick = Genre.Action, Director = "Christopher Nolan", ReleaseDate = new DateTime(2008, 7 , 9) });
+            movie.Add(new MovieName() { Name = "Gilmors girls", GenrePick = Genre.Drama, Director = "Ivan Peric", ReleaseDate = new DateTime(2018 , 1, 1) });
+            movie.Add(new MovieName() { Name = "Scrubs", GenrePick = Genre.Family , Director = "Aleksandar Dickov", ReleaseDate = new DateTime(2066,5,30) });
             return movie;
         }
 
-
-
-
     }
+
+    public enum Genre
+    {
+        Fantasy,
+        Action,
+        Comedy,
+        Family,
+        Drama,
+    }
+
 }

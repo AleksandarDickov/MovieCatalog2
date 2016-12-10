@@ -4,8 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieCatalog"
+        xmlns:core ="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="AddMovie" Height="332.425" Width="342.5">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="GenreEnum" 
+                                MethodName="GetValues"
+                                ObjectType="{x:Type core:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type Type="local:Genre"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
     <Grid Margin="0,0,2,3">
 
         <Grid.RowDefinitions>
@@ -22,14 +32,12 @@
                             Height="20"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
-                            Margin="72,10,0,0"/>
+                            Margin="72,10,0,0"
+                            Text="{Binding Movie.Name}"/>
         <TextBlock Text="Genre" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,59,0,96"/>
         <ComboBox x:Name="Genre"
-            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="72,0,0,90" Width="92">
-            <ComboBoxItem Content="Comedy"/>
-            <ComboBoxItem Content="Action"/>
-            <ComboBoxItem Content="Sci-Fi"/>
-            <ComboBoxItem Content="Drama"/>
+            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="72,0,0,90"
+                  Width="92" ItemsSource="{Binding Source={StaticResource GenreEnum}}">
         </ComboBox>
 
         <TextBlock Text="Director"
@@ -42,7 +50,8 @@
                             Height="20"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
-                            Margin="72,0,0,42"/>
+                            Margin="72,0,0,42"
+                            Text="{Binding Movie.Director}"/>
 
 
         <TextBlock Text="Release Date"
@@ -54,7 +63,8 @@
             HorizontalAlignment="Left"
             Margin="112,155,0,-7"
             VerticalAlignment="Top"
-            SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+            SelectedDateChanged="DatePicker_SelectedDateChanged"
+                    SelectedDate="{Binding Movie.ReleaseDate}"/>
         <Button x:Name="button_Ok" Content="OK" HorizontalAlignment="Left" Height="23" Margin="10,219,0,-69" VerticalAlignment="Top" Width="78" FontWeight="Bold" Click="button_Ok_Click"/>
         <Button x:Name="button_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="23" Margin="136,219,0,-67" VerticalAlignment="Top" Width="78" FontWeight="Bold" Click="button_Cancel_Click"/>
 

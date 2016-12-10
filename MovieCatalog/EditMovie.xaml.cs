@@ -81,6 +81,8 @@ namespace MovieCatalog
 
         private void button_Ok_Click(object sender, RoutedEventArgs e)
         {
+            Movie.GenrePick = (Genre)Genre.SelectedItem;
+
             this.DialogResult = true;
             this.Close();
         }
