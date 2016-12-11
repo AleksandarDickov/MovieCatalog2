@@ -23,6 +23,7 @@ namespace MovieCatalog
         public AddMovie()
         {
             InitializeComponent();
+         
         }
         private void DatePicker_SelectedDateChanged(object sender,
         SelectionChangedEventArgs e)
@@ -51,14 +52,12 @@ namespace MovieCatalog
 
         private void button_Ok_Click(object sender, RoutedEventArgs e)
         {
-            
             Movie = new MovieName();
-           
             Movie.Name = Fullname.Text;
             Movie.Director = Director.Text;
-            Movie.Genre = Genre.Text;
-            
+            Movie.GenrePick = (Genre)Genre.SelectedItem;
             Movie.ReleaseDate = Date.SelectedDate.Value;
+
             this.DialogResult = true;
             this.Close(); 
         }

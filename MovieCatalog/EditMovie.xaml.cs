@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,11 +21,28 @@ namespace MovieCatalog
     /// </summary>
     public partial class EditMovie : Window
     {
-        public MovieName Movie { get; set; }
-        public EditMovie()
+        private MovieName _movie;
+
+        public MovieName Movie
         {
+            get
+            {
+                return _movie;
+            }
+            set
+            {
+                _movie = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public EditMovie(MovieName movie)
+        {
+            DataContext = this;
+            Movie = movie;
             InitializeComponent();
         }
+
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             // ... Get DatePicker reference.
@@ -46,13 +64,15 @@ namespace MovieCatalog
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void NotifyPropertyChanged(string propName)
+
+        private void RaisePropertyChanged(
+            [CallerMemberName] string caller = "")
         {
-            if (this.PropertyChanged != null)
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(caller));
+            }
         }
-
-
 
         private void button_Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -61,18 +81,10 @@ namespace MovieCatalog
 
         private void button_Ok_Click(object sender, RoutedEventArgs e)
         {
-             Fullname.Text = Movie.Name;
-      //     Genre.Text = Movie.Genre;
-      //     Director.Text= Movie.Director ;
+            Movie.GenrePick = (Genre)Genre.SelectedItem;
 
-            
-         
             this.DialogResult = true;
             this.Close();
-
-            //  if (dataGrid.SelectedItem != null)
-            //      (lbUsers.SelectedItem as User).Name = "Random Name";
-            //
         }
     }
 }
