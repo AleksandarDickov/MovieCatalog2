@@ -11,6 +11,24 @@ namespace MovieCatalog
 {
     public class MovieName : INotifyPropertyChanged
     {
+        public MovieName()
+        {
+
+        }
+
+        public MovieName(MovieName newMovie)
+        {
+            CopyProperties(newMovie);
+        }
+
+        public void CopyProperties(MovieName movie)
+        {
+            //this.GenrePick = (Genre)movie.GenrePick;
+            this.Name = movie.Name;
+            this.Director = movie.Director;
+            this.GenrePick = movie.GenrePick;
+            this.ReleaseDate = movie.ReleaseDate;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void RaisePropertyChanged(

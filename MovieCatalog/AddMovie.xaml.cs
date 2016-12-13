@@ -60,6 +60,7 @@ namespace MovieCatalog
 
             this.DialogResult = true;
             this.Close(); 
+            
         }
     }
 }

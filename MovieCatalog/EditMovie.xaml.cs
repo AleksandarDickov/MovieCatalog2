@@ -22,6 +22,7 @@ namespace MovieCatalog
     public partial class EditMovie : Window
     {
         private MovieName _movie;
+        private MovieName _oldMovie;
 
         public MovieName Movie
         {
@@ -39,7 +40,8 @@ namespace MovieCatalog
         public EditMovie(MovieName movie)
         {
             DataContext = this;
-            Movie = movie;
+            _oldMovie = movie;
+            Movie = new MovieName(movie);
             InitializeComponent();
         }
 
@@ -81,7 +83,7 @@ namespace MovieCatalog
 
         private void button_Ok_Click(object sender, RoutedEventArgs e)
         {
-            Movie.GenrePick = (Genre)Genre.SelectedItem;
+            _oldMovie.CopyProperties(Movie);
 
             this.DialogResult = true;
             this.Close();

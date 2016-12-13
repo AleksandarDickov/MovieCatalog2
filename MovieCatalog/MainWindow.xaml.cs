@@ -58,10 +58,10 @@ namespace MovieCatalog
                 var selectedMovie = (MovieName)dataGrid.SelectedItem;
                 var editDialog = new EditMovie(selectedMovie);
                 
-
+            
                 if (editDialog.ShowDialog() == true)
                 {
-
+            
                 }
             }
         }
