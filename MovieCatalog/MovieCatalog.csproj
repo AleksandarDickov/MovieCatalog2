@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddorEditViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditMovie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -69,6 +73,9 @@
     </Page>
     <Compile Include="AddMovie.xaml.cs">
       <DependentUpon>AddMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddorEditViewModel.xaml.cs">
+      <DependentUpon>AddorEditViewModel.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

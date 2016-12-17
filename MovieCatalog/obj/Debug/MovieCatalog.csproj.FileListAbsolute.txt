@@ -49,3 +49,5 @@ C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\Mo
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.pdb
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.csprojResolveAssemblyReference.cache
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\AddorEditViewModel.g.cs
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\AddorEditViewModel.baml

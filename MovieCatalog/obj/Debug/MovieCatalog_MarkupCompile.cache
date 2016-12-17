@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\App.xaml
-3125637067
+4-146031200
 
-8-1790776704
+91310386656
 13738642453
-AddMovie.xaml;EditMovie.xaml;MainWindow.xaml;
+AddMovie.xaml;AddorEditViewModel.xaml;EditMovie.xaml;MainWindow.xaml;
 
 False
 
