@@ -32,11 +32,11 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Margin="72,10,0,0"
-                            Text="{Binding CurrentMovie.Name}"/>
+                            Text="{Binding CurrentMovie.Name , Mode=TwoWay}"/>
         <TextBlock Text="Genre" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,59,0,96" />
         <ComboBox x:Name="Genre"
             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="72,0,0,90" Width="92"
-                  ItemsSource="{Binding Source={StaticResource GenreEnum}}" SelectedItem="{Binding CurrentMovie.GenrePick}">
+                  ItemsSource="{Binding Source={StaticResource GenreEnum}}" SelectedItem="{Binding CurrentMovie.GenrePick, Mode=TwoWay}">
         </ComboBox>
 
         <TextBlock Text="Director"
@@ -50,7 +50,7 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
                             Margin="72,0,0,42"
-                            Text="{Binding CurrentMovie.Director}"/>
+                            Text="{Binding CurrentMovie.Director , Mode=TwoWay}"/>
 
 
         <TextBlock Text="Release Date"
@@ -63,7 +63,7 @@
             Margin="112,155,0,-7"
             VerticalAlignment="Top"
             SelectedDateChanged="DatePicker_SelectedDateChanged"
-                      SelectedDate="{Binding CurrentMovie.ReleaseDate}"/>
+                      SelectedDate="{Binding CurrentMovie.ReleaseDate, Mode=TwoWay}"/>
         <Button x:Name="button_Ok" Content="OK" HorizontalAlignment="Left" Height="23" Margin="10,219,0,-69" VerticalAlignment="Top" Width="78" FontWeight="Bold" Click="button_Ok_Click"/>
         <Button x:Name="button_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="23" Margin="136,219,0,-67" VerticalAlignment="Top" Width="78" FontWeight="Bold" Click="button_Cancel_Click"/>
 

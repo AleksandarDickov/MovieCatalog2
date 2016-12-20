@@ -21,11 +21,12 @@ namespace MovieCatalog
     public partial class AddorEditViewModel : Window
     {
         public MovieName CurrentMovie;
-        public ObservableCollection<MovieName> AllMovie = new ObservableCollection<MovieName>();
+        public ObservableCollection<MovieName> AllMovies = new ObservableCollection<MovieName>();
 
         public AddorEditViewModel()
         {
             InitializeComponent();
+
         }
 
         private void DatePicker_SelectedDateChanged(object sender,

@@ -22,7 +22,7 @@
         <Button x:Name="button_Exit" Content="Exit" HorizontalAlignment="Left" Height="32" Margin="575,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Exit_Click"/>
         <Button x:Name="button_Export" Content="Export" HorizontalAlignment="Left" Height="32" Margin="122,387,0,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="14" Click="button_Export_Click"/>
         <Button x:Name="button_Delete" Content="Delete" HorizontalAlignment="Left" Height="32" Margin="549,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Delete_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="243" 
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="243" SelectedItem="{Binding Selected}"
                   Margin="10,10,0,0" VerticalAlignment="Top" Width="630" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name"

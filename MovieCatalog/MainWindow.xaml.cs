@@ -22,13 +22,13 @@ namespace MovieCatalog
     public partial class MainWindow : Window
     {
         public ObservableCollection<MovieName> moviesList = new ObservableCollection<MovieName>();
-        
+        public AddorEditViewModel model = new AddorEditViewModel();
 
         public MainWindow()
         {
             InitializeComponent();
-            model.AllMovie = MovieName.getMovie();
-            dataGrid.ItemsSource = model.AllMovie;
+            model.AllMovies = MovieName.getMovie();
+            dataGrid.ItemsSource = model.AllMovies;
         }
 
         private void button_Exit_Click(object sender, RoutedEventArgs e)
@@ -37,14 +37,14 @@ namespace MovieCatalog
             Application.Current.Shutdown();
         }
 
-        AddorEditViewModel model = new AddorEditViewModel();
+        
         private void button_Add_Click(object sender, RoutedEventArgs e)
         {
-            AddorEditViewModel addDialog = new AddorEditViewModel();
+          //  AddorEditViewModel addDialog = new AddorEditViewModel();
             model.CurrentMovie = new MovieName();
-            if (addDialog.ShowDialog() == true)
+            if (model.ShowDialog() == true)
             {
-                model.AllMovie.Add(model.CurrentMovie);
+                model.AllMovies.Add(model.CurrentMovie);
           //      dataGrid.Items.Refresh();
                 // model.AllMovie.Add(model.CurrentMovie);
             }
@@ -68,8 +68,7 @@ namespace MovieCatalog
             {
                 var selectedMovie = (MovieName)dataGrid.SelectedItem;
                 var editDialog = new EditMovie(selectedMovie);
-                
-            
+
                 if (editDialog.ShowDialog() == true)
                 {
             
