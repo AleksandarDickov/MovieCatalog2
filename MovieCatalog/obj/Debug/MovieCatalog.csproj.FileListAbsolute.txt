@@ -51,3 +51,13 @@ C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\Mo
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\AddorEditViewModel.g.cs
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\AddorEditViewModel.baml
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Prism.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Prism.Wpf.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Prism.xml
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Prism.Wpf.xml
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\Newtonsoft.Json.xml

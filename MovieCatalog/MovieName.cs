@@ -39,7 +39,7 @@ namespace MovieCatalog
                 PropertyChanged(this, new PropertyChangedEventArgs(caller));
             }
         }
-
+        
         private string _name;
         public string Name
         {
@@ -73,7 +73,7 @@ namespace MovieCatalog
             }
         }
 
-        private DateTime _releaseDate;
+        private DateTime _releaseDate = DateTime.Now;
         public DateTime ReleaseDate
         {
             get { return _releaseDate; }

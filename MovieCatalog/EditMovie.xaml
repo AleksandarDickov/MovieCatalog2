@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MovieCatalog"
         xmlns:core ="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="EditMovie" Height="300" Width="300">
     <Window.Resources>
         <ObjectDataProvider x:Key="GenreEnum" 

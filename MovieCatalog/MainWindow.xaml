@@ -12,18 +12,39 @@
                             MethodName="GetValues"
                             ObjectType="{x:Type core:Enum}">
             <ObjectDataProvider.MethodParameters>
-                     <x:Type Type="local:Genre"/>
+                <x:Type Type="local:Genre"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
-    
+
     <Grid Name="MovieCatalog">
-        <Button x:Name="button_Import" Content="Import" HorizontalAlignment="Left" Height="32" Margin="10,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Import_Click"/>
-        <Button x:Name="button_Exit" Content="Exit" HorizontalAlignment="Left" Height="32" Margin="575,387,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Exit_Click"/>
-        <Button x:Name="button_Export" Content="Export" HorizontalAlignment="Left" Height="32" Margin="122,387,0,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="14" Click="button_Export_Click"/>
-        <Button x:Name="button_Delete" Content="Delete" HorizontalAlignment="Left" Height="32" Margin="549,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Delete_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="243" SelectedItem="{Binding Selected}"
-                  Margin="10,10,0,0" VerticalAlignment="Top" Width="630" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="button_Import" Content="Import" HorizontalAlignment="Left" Height="32" Margin="10,29,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Command="{Binding ImportCommand}" Grid.Row="3"/>
+        <Button x:Name="button_Exit" Content="Exit" HorizontalAlignment="Left" Height="32" Margin="10,29,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Command="{Binding ExitCommand}" Grid.Row="3" Grid.Column="5"/>
+        <Button x:Name="button_Export" Content="Export" HorizontalAlignment="Left" Height="32" Margin="9,29,0,0" VerticalAlignment="Top" Width="94" FontWeight="Bold" FontSize="14" Command="{Binding ExportCommand}" Grid.Row="3" Grid.Column="1" />
+        <Button x:Name="button_Delete" Content="Delete" HorizontalAlignment="Left" Height="32" Margin="16,10,0,0" VerticalAlignment="Top" Width="95" FontSize="14" FontWeight="Bold" Command="{Binding DeleteCommand}" Grid.Row="2" Grid.Column="5"/>
+        <Button x:Name="button_Add" Content="Add" HorizontalAlignment="Right" Height="32" Margin="0,10,10,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Command="{Binding AddCommand}" Grid.Row="2" Grid.Column="3"/>
+        <Button x:Name="button_Edit" Content="Edit" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" 
+                Width="93" FontSize="14" FontWeight="Bold" Command="{Binding EditCommand}" Grid.Row="2" Grid.Column="4"/>
+        <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="91" Height="30" Command="{Binding SearchCommand}" FontWeight="Bold" FontSize="14" Grid.Row="2"/>
+
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="29" Margin="10,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Text="{Binding SearchValue}" Grid.Row="1" Grid.RowSpan="2"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="245"
+                  ItemsSource="{Binding Movies}" SelectedItem="{Binding SelectedMovie}"
+                  Margin="10,10,0,0" VerticalAlignment="Top" Width="640" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True" Grid.ColumnSpan="6" Grid.RowSpan="2" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name"
                                           Binding="{Binding Name, Mode=TwoWay}" />
@@ -37,9 +58,6 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button x:Name="button_Add" Content="Add" HorizontalAlignment="Left" Height="32" Margin="304,274,0,0" VerticalAlignment="Top" Width="91" FontSize="14" FontWeight="Bold" Click="button_Add_Click"/>
-        <Button x:Name="button_Edit" Content="Edit" HorizontalAlignment="Left" Height="32" Margin="424,274,0,0" VerticalAlignment="Top" 
-                Width="91" FontSize="14" FontWeight="Bold" Click="button_Edit_Click"/>
 
     </Grid>
 </Window>
