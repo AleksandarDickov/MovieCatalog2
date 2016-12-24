@@ -1,4 +1,4 @@
-﻿<Window x:Class="MovieCatalog.AddorEditViewModel"
+﻿<Window x:Class="MovieCatalog.AddorEdit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MovieCatalog"
         xmlns:core ="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="AddorEditViewModel" Height="300" Width="300">
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="EditMovie" Height="300" Width="300">
     <Window.Resources>
         <ObjectDataProvider x:Key="GenreEnum" 
                                 MethodName="GetValues"
@@ -32,11 +33,11 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Margin="72,10,0,0"
-                            Text="{Binding CurrentMovie.Name , Mode=TwoWay}"/>
+                            Text="{Binding Movie.Name}"/>
         <TextBlock Text="Genre" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,59,0,96" />
         <ComboBox x:Name="Genre"
             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="72,0,0,90" Width="92"
-                  ItemsSource="{Binding Source={StaticResource GenreEnum}}" SelectedItem="{Binding CurrentMovie.GenrePick, Mode=TwoWay}">
+                  ItemsSource="{Binding Source={StaticResource GenreEnum}}" SelectedItem="{Binding Movie.GenrePick}">
         </ComboBox>
 
         <TextBlock Text="Director"
@@ -50,7 +51,7 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
                             Margin="72,0,0,42"
-                            Text="{Binding CurrentMovie.Director , Mode=TwoWay}"/>
+                            Text="{Binding Movie.Director}"/>
 
 
         <TextBlock Text="Release Date"
@@ -63,11 +64,10 @@
             Margin="112,155,0,-7"
             VerticalAlignment="Top"
             SelectedDateChanged="DatePicker_SelectedDateChanged"
-                      SelectedDate="{Binding CurrentMovie.ReleaseDate, Mode=TwoWay}"/>
+                      SelectedDate="{Binding Movie.ReleaseDate}"/>
         <Button x:Name="button_Ok" Content="OK" HorizontalAlignment="Left" Height="23" Margin="10,219,0,-69" VerticalAlignment="Top" Width="78" FontWeight="Bold" Click="button_Ok_Click"/>
         <Button x:Name="button_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="23" Margin="136,219,0,-67" VerticalAlignment="Top" Width="78" FontWeight="Bold" Click="button_Cancel_Click"/>
 
 
     </Grid>
 </Window>
-

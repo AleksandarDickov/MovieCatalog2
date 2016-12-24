@@ -41,7 +41,12 @@
                 Width="93" FontSize="14" FontWeight="Bold" Command="{Binding EditCommand}" Grid.Row="2" Grid.Column="4"/>
         <Button x:Name="Search" Content="Search" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="91" Height="30" Command="{Binding SearchCommand}" FontWeight="Bold" FontSize="14" Grid.Row="2"/>
 
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="29" Margin="10,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Text="{Binding SearchValue}" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="29" Margin="10,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Grid.Row="1" Grid.RowSpan="2">
+        <TextBox.Text>
+            <Binding Path="SearchValue" 
+             UpdateSourceTrigger="PropertyChanged"/>
+        </TextBox.Text>
+        </TextBox>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="245"
                   ItemsSource="{Binding Movies}" SelectedItem="{Binding SelectedMovie}"
                   Margin="10,10,0,0" VerticalAlignment="Top" Width="640" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True" Grid.ColumnSpan="6" Grid.RowSpan="2" >
