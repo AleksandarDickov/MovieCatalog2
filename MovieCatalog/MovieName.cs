@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -31,8 +32,10 @@ namespace MovieCatalog
         }
 
         public void CopyProperties(MovieName movie)
-        { 
+        {
+            
             this.Name = movie.Name;
+
             this.Director = movie.Director;
             this.GenrePick = movie.GenrePick;
             this.ReleaseDate = movie.ReleaseDate;
@@ -47,6 +50,8 @@ namespace MovieCatalog
                 PropertyChanged(this, new PropertyChangedEventArgs(caller));
             }
         }
+
+        public int Id { get; set; }
         
         private string _name;
         public string Name
@@ -80,6 +85,8 @@ namespace MovieCatalog
                 RaisePropertyChanged();
             }
         }
+
+        public List<MovieName> MoviesList { get; set; }
 
         private DateTime _releaseDate = DateTime.Now;
         public DateTime ReleaseDate

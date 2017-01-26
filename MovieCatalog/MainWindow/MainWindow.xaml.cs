@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace MovieCatalog
 {
@@ -23,12 +24,29 @@ namespace MovieCatalog
     {
         private ObservableCollection<MovieName> moviesList = new ObservableCollection<MovieName>();
         public MainWindowViewModel viewModel;
+        public MovieContext Context;
+
 
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+       //     DataContext = new MainWindowViewModel();
+
+            Context = new MovieContext();
+            var MovieContext = new MainWindowViewModel(Context);
+            
+                foreach (MovieName film in Context.Movies)
+                {
+                    MovieContext.Movies.Add(film);
+                }
+            DataContext = MovieContext;
+            
+    
+            
+
         }
+
+        
 
     }
 }

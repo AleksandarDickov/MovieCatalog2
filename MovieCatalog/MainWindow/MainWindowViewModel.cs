@@ -27,6 +27,7 @@ namespace MovieCatalog
         public ICommand ImportCommand { get; set; }
         private MovieName selectedMovie;
         private string searchValue;
+        private MovieContext context;
 
         public MainWindowViewModel()
         {
@@ -37,6 +38,11 @@ namespace MovieCatalog
             ExitCommand = new DelegateCommand(Exit);
             ExportCommand = new DelegateCommand(Export);
             ImportCommand = new DelegateCommand(Import);
+        }
+
+        public MainWindowViewModel(MovieContext context)
+        {
+            this.context = context;
         }
 
         public void Exit()

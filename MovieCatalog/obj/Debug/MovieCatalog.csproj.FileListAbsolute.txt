@@ -58,6 +58,10 @@ C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\Mo
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.pdb
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MainWindow\MainWindow.g.cs
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MainWindow\MainWindow.baml
-C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.csprojResolveAssemblyReference.cache
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\AddAndEdit\AddorEdit.g.cs
 C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\AddAndEdit\AddorEdit.baml
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\obj\Debug\MovieCatalog.csprojResolveAssemblyReference.cache
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\EntityFramework.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\EntityFramework.xml
+C:\Users\DOIT_DOTNET_USER1\Documents\Visual Studio 2015\Projects\MovieCatalog\MovieCatalog2\MovieCatalog\bin\Debug\EntityFramework.SqlServer.xml
